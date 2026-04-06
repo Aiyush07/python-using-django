@@ -1,5 +1,4 @@
-
-{% load static %}
+﻿{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +8,24 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <nav class="sidebar">
-        <ul class="nav-list">
-            <li><a href="{% url 'newApp:home' %}">Home</a></li>
-            <li><a href="{% url 'newApp:about' %}">About</a></li>
-            <li><a href="{% url 'newApp:contact' %}">Contact</a></li>
-        </ul>
-    </nav>
-    {% block content %}{% endblock %}
-    
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="container header-inner">
+                <a class="brand" href="{% url 'newApp:home' %}">Ayu</a>
+                <nav class="site-nav">
+                    <a href="{% url 'newApp:home' %}">Home</a>
+                    <a href="{% url 'newApp:about' %}">About</a>
+                    <a href="{% url 'newApp:contact' %}">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <main class="page-content container">
+            {% block content %}{% endblock %}
+        </main>
+        <footer class="site-footer container">
+            <p>Beautiful shopping UI built for your Django store.</p>
+            <small>&copy; {{ year|default:"2026" }} Ayu. All rights reserved.</small>
+        </footer>
+    </div>
 </body>
 </html>

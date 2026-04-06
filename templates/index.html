@@ -3,6 +3,15 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    <h1>Welcome to Ayu</h1>
-    <p>Explore our curated collection of clothing, shoes and as well as electronics gadgets.</p>
+<section class="home-hero">
+    <div class="hero-card">
+        <span class="eyebrow">Curated collection</span>
+        <h1>Welcome to Ayu</h1>
+        <p class="hero-copy">Explore our curated collection of clothing, shoes and electronics gadgets in a polished shopping experience.</p>
+        <div class="hero-actions">
+            <a class="btn btn-primary" href="{% url 'newApp:home' %}">Browse Products</a>
+            <a class="btn btn-secondary" href="{% url 'newApp:contact' %}">Contact Us</a>
+        </div>
+    </div>
+</section>
 {% endblock %}

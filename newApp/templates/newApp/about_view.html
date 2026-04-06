@@ -1,10 +1,26 @@
 {% extends 'website/layout.html' %}
 
-{% block title %}
-About
-{% endblock %}
+{% block title %}About{% endblock %}
 
 {% block content %}
-<h1>About New App</h1>
-<p>This is the about page.</p>
+<section class="page-heading">
+    <span class="eyebrow">Our story</span>
+    <h1>About Ayu</h1>
+    <p>We bring a modern shopping experience to your customers with clean design, thoughtful product displays, and a polished brand presence.</p>
+</section>
+
+<section class="section-card">
+    <h2>Why choose Ayu?</h2>
+    <p>We curate products across clothing, footwear, and electronics so visitors can shop confidently in a friendly and elegant store.</p>
+    <div class="contact-columns">
+        <div class="section-card">
+            <h3>Quality selection</h3>
+            <p>Every product is displayed with clear information, beautiful visuals, and easy-to-read pricing.</p>
+        </div>
+        <div class="section-card">
+            <h3>Fast browsing</h3>
+            <p>Responsive layouts keep your store looking great on both mobile and desktop devices.</p>
+        </div>
+    </div>
+</section>
 {% endblock %}
